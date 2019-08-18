@@ -1,6 +1,8 @@
 import React from 'react';
 
 
+// convert calss component to statless functional component
+/*
 class ListContacts extends React.Component {
   render() {
     return(
@@ -11,7 +13,7 @@ class ListContacts extends React.Component {
 
           <div className='contact-avatar' style={{
             backgroundImage: `url(${contact.avatarURL})`
-          }}></div>
+           }}></div>
           <div className='contact-details'>
             <p>{contact.name}</p>
             <p>{contact.email}</p>
@@ -25,6 +27,36 @@ class ListContacts extends React.Component {
     )
   }
 }
+*/
 
 
-export default ListContacts;
+function ListContacts(props){
+  return(
+    <ol className='contact-list'>
+
+    {props.contacts.map((contact)=>(
+
+      <li key={contact.id} className='contact-list-item'>
+
+      <div className='contact-avatar' style={{
+        backgroundImage: `url(${contact.avatarURL})`
+       }}></div>
+       
+      <div className='contact-details'>
+        <p>{contact.name}</p>
+        <p>{contact.email}</p>
+      </div>
+
+      <button className='contact-remove'>
+        Remove
+      </button>
+
+      </li>
+
+    ))}
+
+  </ol>
+  )
+}
+
+export default ListContacts
