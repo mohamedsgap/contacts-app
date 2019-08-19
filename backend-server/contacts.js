@@ -22,7 +22,14 @@ const defaultData = {
       name: 'Tyler McGinnis',
       email: 'tyler@reacttraining.com',
       avatarURL: config.origin + '/tyler.jpg'
+    },
+    {
+      id: 'mohamed',
+      name: 'Mohamed Abdel Nasser',
+      email: 'mohdabdellnasser1@gmail.com',
+      avatarURL: config.origin + '/mohamed.jpg'
     }
+
   ]
 }
 
