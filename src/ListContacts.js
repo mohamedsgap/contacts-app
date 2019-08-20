@@ -51,7 +51,6 @@ class ListContacts extends React.Component {
             />
             <Link
              to='/create'
-             onClick={this.props.onNavigate}
              className='add-contact' 
             >Add Contact</Link>
 
